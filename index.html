@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Mode Switcher — Xeran</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-app">
+    <nav>
+      <span class="logo">DarkSwitch</span>
+      <button id="toggle" class="toggle-btn" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+        <span class="label">Dark Mode</span>
+      </button>
+    </nav>
+    <main>
+      <h1>Zero-dependency theme switcher</h1>
+      <p>A lightweight TypeScript library for handling complex theme switching in web apps. Supports system preference detection, localStorage persistence, and smooth CSS transitions.</p>
+      <div class="features">
+        <div class="card">⚡ &lt;1kb gzipped</div>
+        <div class="card">🎨 CSS Variables</div>
+        <div class="card">💾 Persistent</div>
+        <div class="card">📱 System Aware</div>
+      </div>
+      <pre><code>import { DarkSwitch } from 'dark-mode-switcher';
+
+const ds = new DarkSwitch({ persist: true });
+ds.toggle();  // Switch theme
+ds.setTheme('dark');  // Force dark
+ds.onThemeChange((t) => console.log(t));</code></pre>
+    </main>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
